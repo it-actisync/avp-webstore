@@ -2,6 +2,12 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+:root {
+  --swiper-navigation-size: 20px !important;
+  --swiper-navigation-color: #fff !important;
+  --swiper-pagination-color: #fff !important;
+}
+
 @layer utilities {
   /* Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -109,4 +115,32 @@
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
   }
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply w-12 h-12 bg-white rounded-full flex items-center justify-center shadow transition p-5 hover:bg-gray-100 ;
+}
+
+.arrow-icon {
+  width: 5px;
+  height: 5px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  transform: rotate(45deg);
+}
+
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    font-size: 5px;
+    font-weight: bold;
+    content: 'prev';
+    color: #000;
+}
+
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    font-size: 13px;
+    font-weight: bold;
+    content: 'next';
+    color: #000;
 }
