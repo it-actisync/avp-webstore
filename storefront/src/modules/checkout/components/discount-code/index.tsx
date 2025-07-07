@@ -63,7 +63,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
               className="txt-medium text-ui-fg-interactive hover:text-ui-fg-interactive-hover"
               data-testid="add-discount-button"
             >
-              Add Promotion Code(s)
+              Ajouter un code promotionnel
             </button>
 
             {/* <Tooltip content="You can add multiple promotion codes">
@@ -86,7 +86,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                   variant="secondary"
                   data-testid="discount-apply-button"
                 >
-                  Apply
+                  Appliquer
                 </SubmitButton>
               </div>
 
@@ -102,7 +102,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
           <div className="w-full flex items-center">
             <div className="flex flex-col w-full">
               <Heading className="txt-medium mb-2">
-                Promotion(s) applied:
+                Promotion(s) appliquée(s):
               </Heading>
 
               {promotions.map((promotion) => {
@@ -129,7 +129,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                               "percentage"
                                 ? `${promotion.application_method.value}%`
                                 : convertToLocale({
-                                    amount: promotion.application_method.value,
+                                    amount: Number(promotion.application_method.value),
                                     currency_code:
                                       promotion.application_method
                                         .currency_code,
@@ -158,7 +158,7 @@ const DiscountCode: React.FC<DiscountCodeProps> = ({ cart }) => {
                       >
                         <Trash size={14} />
                         <span className="sr-only">
-                          Remove discount code from order
+                          Supprimer le code promotionnel de la commande
                         </span>
                       </button>
                     )}

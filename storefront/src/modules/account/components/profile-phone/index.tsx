@@ -48,7 +48,7 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
   return (
     <form action={formAction} className="w-full">
       <AccountInfo
-        label="Phone"
+        label="Mon numéro de téléphone"
         currentInfo={`${customer.phone}`}
         isSuccess={successState}
         isError={!!state.error}
@@ -58,7 +58,7 @@ const ProfileEmail: React.FC<MyInformationProps> = ({ customer }) => {
       >
         <div className="grid grid-cols-1 gap-y-2">
           <Input
-            label="Phone"
+            label="Mon numéro de téléphone"
             name="phone"
             type="phone"
             autoComplete="phone"
